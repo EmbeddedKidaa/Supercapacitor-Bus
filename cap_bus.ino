@@ -21,7 +21,6 @@ Servo myServo;
 
 
 
-
 // Initialize SH1106 OLED (I2C Mode)
 U8G2_SH1106_128X64_NONAME_F_HW_I2C u8g2(U8G2_R0, /* reset=*/ U8X8_PIN_NONE);
 
@@ -69,10 +68,6 @@ void loop() {
     bool LEFT = digitalRead(INPUT_PIN_1);
     bool RIGHT = digitalRead(INPUT_PIN_2);
     
-
-   
-
-
     //SERVO
 
     if (LEFT && !RIGHT) 
@@ -101,9 +96,6 @@ void loop() {
    
     //Display module & relay connection
 
-    
-
-   
 
     if(soc>=50.00)
     {
@@ -134,17 +126,7 @@ void loop() {
  
     u8g2.sendBuffer();
     delay(100);
-    
- 
-
-    
-
     }
-
-    
-
-    
-   
 
     else
     {   
@@ -213,9 +195,6 @@ void loop() {
       }
     }
 
-    
-
-    
     
     }
 
